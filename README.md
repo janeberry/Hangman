@@ -14,8 +14,8 @@ game.playgame();
 <ul>
   <li> <b> words</b>: String [], random words list</li>
   <li> <b>secretWord</b>: String, the chosen secret word</li>
-  <li> <b>correctLetters</b>: List(Character) correct guesses</li>
-  <li><b>incorrectLetters</b>: List(Character) incorrect guesses</li>
+  <li> <b>correctLetters</b>: List(Character), correct guesses</li>
+  <li><b>incorrectLetters</b>: List(Character), incorrect guesses</li>
   <li><b>stdin</b>: Scanner, user input</li>
 </ul>
 
