@@ -15,10 +15,13 @@ game.playgame();
 
 
 <h2> Constructor </h2>
-- Randomly choose a word from list of words. <br>
-- Set the word as a <b>secretWord</b> <br>
-- Build a initial pattern with _ based on the secretWord (correctLetters) <br>
-- initialize incorrectLetters here using an ArrayList
+<ul>
+  <li>Randomly choose a word from list of words.</li>
+  <li>and set the word as a <b>secretWord</b></li>
+  <br>
+  <li>Build a initial pattern with _ based on the secretWord (correctLetters)</li>
+  <li>initialize incorrectLetters using an ArrayList</li>
+</ul>
 
 ```java
 Random rand = new Random();
