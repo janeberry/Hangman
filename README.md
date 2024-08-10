@@ -40,3 +40,19 @@ for (int i=0; i<secretWord.length(); i++){
 }
 this.incorrectLetters = new ArrayList<Character>();
 ```
+
+<h2>Methods</h2>
+<ul>
+  <li>playGame()</li>
+  <li>handleGuess()</li>
+  <li>gameWon()</li>
+  <li>gameLost()</li>
+  <li>gameOver()</li>
+  <li>printHangman()</li>
+  <li>toString()</li>
+  <li>setCurrentWord()</li>
+  <li>setCorrectLetters()</li>
+  <li>setIncorrectLetters()</li>
+  <li>setBadGuesses()</li>
+</ul>
+
