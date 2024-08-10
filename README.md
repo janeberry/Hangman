@@ -10,7 +10,7 @@ Hangman game = new Hangman();
 game.playgame();
 ```
 
-<h3> Field Declarations</h3>
+<h2> Field Declarations</h2>
 <ul>
   <li> <b> words</b>: String [], random words list</li>
   <li> <b>secretWord</b>: String, the chosen secret word</li>
@@ -21,7 +21,7 @@ game.playgame();
 
 
 
-<h3> Constructor </h3>
+<h2> Constructor </h2>
 <ul>
   <li>Randomly choose a word from list of words.</li>
   <li>and set the word as a <b>secretWord</b></li>
