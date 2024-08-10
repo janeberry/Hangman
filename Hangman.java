@@ -2,9 +2,6 @@ package Hangman;
 
 import java.util.*;
 public class Hangman {
-    /////////////////////////////////
-    // CLASS variable (static)
-    ////////////////////////////////
     private static String [] words =   //choose secret word from these
             {"geography", "cat", "yesterday", "java", "truck", "opportunity",
                     "fish", "token", "transportation", "bottom", "apple", "cake",
@@ -12,9 +9,6 @@ public class Hangman {
                     "caterpillar", "spoon", "watermelon", "laptop", "toe", "toad",
                     "fundamental", "capitol", "garbage", "anticipate", "apple"};
 
-    ////////////////////////////////
-    // Instance Variables
-    ////////////////////////////////
     private String secretWord;       // the chosen secret word
     private List<Character> correctLetters;   // correct guesses
     private List<Character> incorrectLetters; // incorrect guesses
@@ -24,19 +18,15 @@ public class Hangman {
 
 
     public Hangman() {
-        ///////////////////////////////////////////////
         //TODO: Randomly choose a word from list of words
         //      and set the word as a secretWord (Use the Random class)
-        ///////////////////////////////////////////////
         Random rand = new Random();
         int randIndex = rand.nextInt(words.length);
         this.secretWord= words[randIndex];
 
 
-        ////////////////////////////////////////////////
         // TODO: Build a initial pattern with _ based on the secretWord (correctLetters)
         //       initialize incorrectLetters here using an ArrayList
-        /////////////////////////////////////////////////
         correctLetters = new ArrayList<Character>();
         for (int i=0; i<secretWord.length(); i++){
             correctLetters.add('_');
@@ -44,9 +34,7 @@ public class Hangman {
         this.incorrectLetters = new ArrayList<Character>();
     }
 
-    //////////////////////////////////
-    // TODO: Add JavaDoc Comments here
-    /////////////////////////////////
+
 
     /**
      * playGame
@@ -106,27 +94,11 @@ public class Hangman {
         // TODO your code here
         //////////////////////////
 
-        /*
-        Extra Credit
-        1. Checking if it's a letter
-        I put this testing code in handleGuess method, at the very first time.
-        (so that in case the user input doesn't write a letter, doesn't count as incorrect or correct and make try again)
-        We can check if input is a letter with ch>='a' && ch<='z' which from a to z
-
-        2. Same guess
-        After checking if it's a letter,
-        If the user have guessed the input letter before, it doesn't count as incorrect or correct, and make try again with different letter.
-        I make the code checking both incorrect and correct list to see if the letter has been used with contains method.
-
-        --
-        If the input passed all these if statement (true), then it goes to if it's correct or incorrect guess.
-         */
-
-        //EXTRA CREDIT (check letter)
+        //check letter
         if (ch >= 'a' && ch <= 'z') {
         //Checking if the user input is a letter
 
-            //EXTRA CREDIT (same guess)
+            //same guess
             if (correctLetters.contains(ch) || incorrectLetters.contains(ch)) {
                 System.out.println("Try again with different letter");
                 //If user guessed more than once with same letter, it will be not counted as wrong or incorrect,
@@ -163,10 +135,6 @@ public class Hangman {
      * @return true if the user has won, false otherwise
      */
     public boolean gameWon() {
-        //////////////////////////
-        // TODO your code here
-        //////////////////////////
-
         return (!correctLetters.contains('_'));
     }
 
@@ -179,9 +147,6 @@ public class Hangman {
      * @return true if the user has lost, false otherwise
      */
     public boolean gameLost() {
-        //////////////////////////
-        // TODO your code here
-        //////////////////////////
         if(incorrectLetters.size()==7){
             return true;
         } else {
@@ -199,10 +164,6 @@ public class Hangman {
      * @return true if the user has won or lost, false otherwise
      */
     public boolean gameOver() {
-        //////////////////////////
-        // TODO your code here
-        //////////////////////////
-
         return (gameLost() == true || gameWon() == true);
 
     }
@@ -258,11 +219,6 @@ public class Hangman {
         System.out.println();
     }
 
-
-
-    //////////////////////////////////////////////////////////////////////
-    // 6. FOR TESTING PURPOSE ONLY
-    //////////////////////////////////////////////////////////////////////
 
     /**
      * toString
