@@ -18,15 +18,9 @@ public class Hangman {
 
 
     public Hangman() {
-        //TODO: Randomly choose a word from list of words
-        //      and set the word as a secretWord (Use the Random class)
         Random rand = new Random();
         int randIndex = rand.nextInt(words.length);
         this.secretWord= words[randIndex];
-
-
-        // TODO: Build a initial pattern with _ based on the secretWord (correctLetters)
-        //       initialize incorrectLetters here using an ArrayList
         correctLetters = new ArrayList<Character>();
         for (int i=0; i<secretWord.length(); i++){
             correctLetters.add('_');
