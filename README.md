@@ -4,6 +4,7 @@ The game selects a random word from a predefined list, and the player must guess
 The player has a limited number of attempts to guess the word correctly before losing the game.
 
 <h2> 👾How to play game</h2>
+You can play the game in Java Console
 
 ```java
 Hangman game = new Hangman();
